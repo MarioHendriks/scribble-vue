@@ -13,7 +13,7 @@
       </div>
       <div class="flex w-full text-right">
         <div class="w-full">
-          <timeago :datetime="scribble.createdDate"></timeago>
+          <timeago :datetime="this.addhours()"></timeago>
         </div>
       </div>
     </div>
@@ -68,6 +68,10 @@ import { LikeDTO } from "@/models/dto/like.dto";
       }).catch(err => {
         return err
       })
+    }
+
+    addhours(){
+      return new Date(this.scribble.createdDate).getTime() + (2*60*60*1000)
     }
 
     generateText(){

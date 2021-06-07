@@ -8,7 +8,9 @@ import { ProfileDTO } from "@/models/dto/profile.dto";
 import { ProfileViewmodel } from "@/models/viewmodel/profile.viewmodel";
 
 export class ProfileService {
-    public static async  postProfile(profileDTO: ProfileDTO): Promise<ProfileViewmodel> {
+  public static async postProfile(
+    profileDTO: ProfileDTO
+  ): Promise<ProfileViewmodel> {
     const url = "http://localhost:3002/profile";
 
     return AxiosRequestHandler.post(url, profileDTO)
@@ -17,7 +19,23 @@ export class ProfileService {
           return res.data;
         }
       })
-      .catch(err => {
+      .catch((err) => {
+        console.table(err);
+        throw err;
+      });
+  }
+
+  public static async getProfileByUsername(username: string): Promise<any> {
+    const url = `http://localhost:3002/profile/username/${username}`; //TODO fix dit met token
+    //TODO add response
+
+    return AxiosRequestHandler.get(url)
+      .then((res: AxiosResponse) => {
+        if (res.status >= 200 && res.status < 300) {
+          return res.data;
+        }
+      })
+      .catch((err) => {
         console.table(err);
         throw err;
       });

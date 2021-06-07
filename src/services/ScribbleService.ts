@@ -40,6 +40,23 @@ export class ScribbleService {
       });
   }
 
+  public static async  getAllScribblesByUsername(username:string, pagenum: number): Promise<any> {
+    const url = `http://localhost:3003/${username}/${pagenum}`; //TODO fix dit met token
+    //TODO add response
+
+    return AxiosRequestHandler.get(url)
+      .then((res: AxiosResponse) => {
+        if (res.status >= 200 && res.status < 300) {
+          return res.data;
+        }
+      })
+      .catch(err => {
+        console.table(err);
+        throw err;
+      });
+  }
+
+
   public static async  getAllScribblesByTrend(trend: string): Promise<any> {
     const url = `http://localhost:3003/trend/${trend}`; //TODO fix dit met token
     //TODO add response

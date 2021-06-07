@@ -6,6 +6,7 @@ import Signup from "@/views/Signup.vue";
 import Home from "@/views/Home.vue";
 import Verification from "@/views/Verification.vue";
 import ResetCredentials from "@/views/ResetCredentials.vue";
+import Profile from '@/views/Profile.vue'
 import store from "@/store";
 import { AuthVM } from "@/models/viewmodel/auth.viewmodel";
 import { AccountStatus } from "@/models/Enum/AccountStatus";
@@ -32,6 +33,16 @@ const routes: Array<RouteConfig> = [
     path: "/Home",
     name: "Home",
     component: Home,
+    meta: {
+      
+      requiresAuth: true,
+      
+    }
+  },
+  {
+    path: "/profile/:name",
+    name: "Profile",
+    component: Profile,
     meta: {
       
       requiresAuth: true,

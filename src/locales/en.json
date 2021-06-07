@@ -1,0 +1,33 @@
+{
+  "LandingPage":{
+    "startNow": "Start Now!",
+    "catchphrase": "Already an account,",
+    "LoginNow": "Login here !"
+  },
+  "Login":{
+      "username": "username",
+      "password": "password",
+      "forgotCred": "Forgot credentials,",
+      "resetHere": "Reset here!"
+  },
+  "ProfileModal":{
+    "age": "Age",
+    "bio": "Bio",
+    "photo": "Profile picture",
+    "delete": "Delete Picture"
+  },
+  "homeprofile":{
+    "age": "Age",
+    "likes": "Likes",
+    "followers": "Followers",
+    "following": "Following"
+  },
+  "homeSearch":{
+    "search": "Search a Scribble or a User.",
+    "mentions": "@Mentions",
+    "myscribbles": "My Scribbles"
+  },
+  "homeScribbleBox":{
+    "catchphrase": "Scrbble what's on your mind."
+  }
+}

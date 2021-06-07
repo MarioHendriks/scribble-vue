@@ -1,0 +1,33 @@
+{
+    "LandingPage":{
+      "startNow": "Begin Nu!",
+      "catchphrase": "Al een gebruiker,",
+      "LoginNow": "Log hier in!"
+    },
+    "Login":{
+        "username": "gebruikersnaam",
+        "password": "wachtwoord",
+        "forgotCred": "Inloggegevens vergeten,",
+        "resetHere": "Herstel hier!"
+    },
+    "ProfileModal":{
+      "age": "Leeftijd",
+      "bio": "Biografie",
+      "photo": "Profiel foto",
+      "delete": "Verwijder foto"
+    },
+    "homeprofile":{
+      "age": "Leeftijd",
+      "likes": "Leuk gevonden",
+      "followers": "Volgers",
+      "following": "Volgend"
+    },
+    "homeSearch":{
+      "search": "Zoek een Scibble of Gebruiker.",
+      "mentions": "@Benoemingen",
+      "myscribbles": "Mijn Scribbles"
+    },
+    "homeScribbleBox":{
+      "catchphrase": "Krabbel je gedachten."
+    }
+  }

@@ -1,0 +1,104 @@
+version: '3.5'
+
+services:
+  redis:
+    container_name: redis
+    image: redis:alpine
+    command: redis-server /usr/local/etc/redis/redis.conf --requirepass redispassword
+    ports:
+      - "6379:6379"
+    volumes:
+      - $PWD/redis.conf:/usr/local/etc/redis/redis.conf
+    networks:
+      - postgres
+    restart: unless-stopped 
+
+  postgres:
+    container_name: postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /data/postgres
+    volumes:
+       - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+  pgadmin:
+    container_name: pgadmin_container
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+       - pgadmin:/root/.pgadmin
+    ports:
+      - "${PGADMIN_PORT:-5050}:80"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+  front-end:
+    container_name: frontend
+    build:
+      context: ../
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.frontend.rule=PathPrefix(`/`)"
+      - "traefik.http.routers.main.service=front-end@docker"
+    ports:
+      - '8080:8080'
+    depends_on: 
+      - reverse-proxy
+
+  auth-service:
+    image: https://hub.docker.com/r/ruljo026/scibble-auth-service
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.auth-service.rule=(Host(`localhost`) && PathPrefix(`/auth`))"
+      - "traefik.http.routers.auth-service.service=auth-service@docker"
+      - "traefik.http.services.auth-service.loadbalancer.server.port=3000"
+    depends_on:
+      - reverse-proxy
+      - redis
+      - postgres
+
+  #Platform Infra
+  reverse-proxy:
+    image: traefik:2.1 # The official Traefik docker image
+    command:
+      - --api.insecure=true
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.web.address=:80
+      - --entryPoints.web.forwardedHeaders.insecure
+      - --entryPoints.websecure.forwardedHeaders.insecure
+    ports:
+      - "80:80"     # The HTTP port
+      - "8888:8080" # The Web UI (enabled by --api)
+    labels:
+      - "traefik.enable=true"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock # So that Traefik can listen to the Docker events
+
+  dind:
+    restart: always
+    privileged: true
+    volumes:
+      - /var/lib/docker
+    image: docker:17.09.0-ce-dind
+    command:
+      - --storage-driver=overlay2
+
+networks:
+  postgres:
+    driver: bridge
+
+volumes:
+    postgres:
+    pgadmin:

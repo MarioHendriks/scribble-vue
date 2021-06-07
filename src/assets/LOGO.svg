@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="493.58" height="90.618" viewBox="0 0 493.58 90.618">
+  <g id="LOGO" transform="translate(-467.5 -207.898)">
+    <g id="feather" transform="matrix(0.985, 0.174, -0.174, 0.985, 876.93, 205.111)">
+      <g id="Group_1" data-name="Group 1" transform="translate(16.051 0)">
+        <path id="Path_1" data-name="Path 1" d="M64.536.027A46.6,46.6,0,0,0,30.205,13.78L13.024,30.961A44.478,44.478,0,0,0,.225,66.916l.207,2.029L35.684,42.728,69.35.027Z" transform="translate(0)" fill="#fdd752"/>
+        <path id="Path_2" data-name="Path 2" d="M68.918,0,0,68.918l2.029.207a44.013,44.013,0,0,0,4.456.225,44.784,44.784,0,0,0,14.964-2.572A44.756,44.756,0,0,0,37.984,56.326L55.166,39.145A46.6,46.6,0,0,0,68.918,4.813V0Z" transform="translate(0.432 0.027)" fill="#f8bd3f"/>
+      </g>
+      <g id="Group_3" data-name="Group 3" transform="translate(4.203 63.091)">
+        <g id="Group_2" data-name="Group 2" transform="translate(0 0)">
+          <path id="Path_3" data-name="Path 3" d="M5.676,12.458A19.782,19.782,0,0,1,0,.507L4.978,0A14.764,14.764,0,0,0,9.215,8.92Z" fill="#f8bd3f"/>
+        </g>
+      </g>
+      <g id="Group_4" data-name="Group 4" transform="translate(25.958 15.09)">
+        <path id="Path_4" data-name="Path 4" d="M9.841,32.3a44.757,44.757,0,0,1,2.347-19.42A47.849,47.849,0,0,1,18.988,0L9.373,9.615A47.851,47.851,0,0,0,2.572,22.5,44.757,44.757,0,0,0,.225,41.919l.207,2.029,7.7-4.151,1.913-5.465Z" transform="translate(0 0)" fill="#f8bd3f"/>
+        <path id="Path_5" data-name="Path 5" d="M16.1,10.744a44.018,44.018,0,0,1-4.456-.225l-2.029-.207L0,19.927l2.029.207a44.017,44.017,0,0,0,4.456.225,44.784,44.784,0,0,0,14.964-2.572A50.606,50.606,0,0,0,36.556,8.764l8.7-8.7L45.318,0A46.322,46.322,0,0,1,31.065,8.171,44.784,44.784,0,0,1,16.1,10.744Z" transform="translate(0.432 24.021)" fill="#fd9326"/>
+      </g>
+      <g id="Group_6" data-name="Group 6" transform="translate(0 21.806)">
+        <g id="Group_5" data-name="Group 5" transform="translate(0 0)">
+          <path id="Path_6" data-name="Path 6" d="M60.07,0,0,60.07l1.776,1.776L29.568,36.518,61.846,1.776Z" fill="#ecf3fb"/>
+          <path id="Path_7" data-name="Path 7" d="M0,0H84.951V2.512H0Z" transform="translate(1.771 61.839) rotate(-45)" fill="#e0e6f5"/>
+        </g>
+      </g>
+    </g>
+    <g id="inkwell" transform="translate(483.464 254.559)">
+      <path id="Path_8" data-name="Path 8" d="M161.285,47.687h12.852a1.285,1.285,0,0,1,1.285,1.285v5.141H160V48.972A1.285,1.285,0,0,1,161.285,47.687Z" transform="translate(-149.076 -47.687)" fill="#606669"/>
+      <g id="Group_7" data-name="Group 7" transform="translate(8.494 0)">
+        <path id="Path_9" data-name="Path 9" d="M184,47.687h1.285v5.141H184Z" transform="translate(-179.642 -47.687)" fill="#6a7073"/>
+        <path id="Path_10" data-name="Path 10" d="M216,47.687h1.285v5.141H216Z" transform="translate(-209.072 -47.687)" fill="#6a7073"/>
+        <path id="Path_11" data-name="Path 11" d="M248,47.687h1.285v5.141H248Z" transform="translate(-238.501 -47.687)" fill="#6a7073"/>
+        <path id="Path_12" data-name="Path 12" d="M280,47.687h1.285v5.141H280Z" transform="translate(-267.931 -47.687)" fill="#6a7073"/>
+        <path id="Path_13" data-name="Path 13" d="M312,47.687h1.285v5.141H312Z" transform="translate(-297.36 -47.687)" fill="#6a7073"/>
+        <rect id="Rectangle_1" data-name="Rectangle 1" width="19" height="2" rx="1" transform="translate(0.446 5.957)" fill="#6a7073"/>
+      </g>
+      <path id="Path_14" data-name="Path 14" d="M160,143.687h15.422v5.783H160Z" transform="translate(-149.076 -135.976)" fill="#606669"/>
+      <path id="Path_15" data-name="Path 15" d="M61.27,185.326c0,5.783-8.354,13.494-8.354,13.494H32.354S24,191.109,24,185.326c0-8.354,13.494-9.639,18.635-9.639S61.27,176.972,61.27,185.326Z" transform="translate(-24 -165.406)" fill="#6a7073"/>
+      <path id="Path_16" data-name="Path 16" d="M84.274,251.9c-1.709,2.157-3.856,3.213-5.141,3.213-1.928,0-2.57-1.285-3.856-1.285H68.852c-1.286,0-1.928,1.285-3.856,1.285-1.285,0-3.431-1.057-5.14-3.213-3.169-4-6.8-9.239,0-12.209H84.274C91.078,242.657,87.443,247.9,84.274,251.9Z" transform="translate(-53.429 -224.265)" fill="#7e8488"/>
+    </g>
+    <line id="Line_1" data-name="Line 1" x2="493.58" transform="translate(467.5 293.126)" fill="none" stroke="#000" stroke-width="5"/>
+    <text id="Scribble_your_thoughts" data-name="Scribble, your thoughts" transform="translate(531.403 282.516)" font-size="32" font-family="VeganStylePersonalUse, Vegan Style Personal Use"><tspan x="0" y="0">Scribble</tspan><tspan y="0" font-family="SegoeUI, Segoe UI">,</tspan><tspan y="0" xml:space="preserve"> your thoughts</tspan></text>
+  </g>
+</svg>
